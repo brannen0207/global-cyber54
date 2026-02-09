@@ -589,6 +589,23 @@
       &copy; <span id="year"></span> Global Cyber. All rights reserved.
     </p>
   </div>
-</footer>
+</footer><script>
+function toggleFaq(button) {
+    // 1. Find the answer div (it's the next sibling of the button)
+    const content = button.nextElementSibling;
+    // 2. Find the chevron icon inside the button
+    const icon = button.querySelector('[data-feather="chevron-down"]');
+
+    // 3. Toggle the 'hidden' class on the answer div
+    content.classList.toggle('hidden');
+
+    // 4. Rotate the icon if it's open
+    if (content.classList.contains('hidden')) {
+        icon.style.transform = 'rotate(0deg)';
+    } else {
+        icon.style.transform = 'rotate(180deg)';
+    }
+}
+</script>
 </body>
 </html>
